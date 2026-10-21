@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Profile</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px;
+  }
+
+    h1 {
+      margin: 0;
+    }
+
+    .subtitle {
+      color: gray;
+      margin-top: 5px;
+    }
+
+    h2 {
+      margin-top: 25px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #e8f0fb;
+      display: inline-block;
+      padding: 6px 14px;
+      margin: 4px;
+      border-radius: 15px;
+    }
+
+    button {
+      background-color: #080a0c;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    #more-info {
+      display: none;
+      margin-top: 10px;
+    }
+    body.dark {
+      background-color: #1a1a1a;
+      color: #eee;
+    }
+
+    body.dark .container {
+      background-color: #2b2b2b;
+    }
+
+    body.dark li {
+      background-color: #3a4a63;
+    }
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <img class="avatar" src="Photo.jpeg" alt="Photo of Prakhar">
+
+    <h1>Prakhar</h1>
+    <p class="subtitle">Student at IIIT Allahabad</p>
+
+    <h2>About Me</h2>
+    <p>
+      Well, hello there.
+      My name is Prakhar, i am trying to explore things rn. <br>
+      Currently pursuing Btech from IIITA. 
+      (Lekin CG ka khel khtm hai)
+    </p>
+
+    <button id="more-btn">Aur dekhiye Ji</button>
+    <p id="more-info">
+      I, personally, am interested in cyber security, FOSS and WebDev. <br> Though, i barely know these firlds rn <br>
+      <br> I also like to participate and communicate with people as much as i can. <br>Thank You!!!
+    </p>
+
+    <br><br><br>
+    <button id="dark-btn">Andhera ya Roshni?</button>
+
+  </div>
+
+  <script>
+    // Dark mode button
+    var darkBtn = document.getElementById("dark-btn");
+
+    darkBtn.onclick = function () {
+      document.body.classList.toggle("dark");
+    };
+
+    var moreBtn = document.getElementById("more-btn");
+    var moreInfo = document.getElementById("more-info");
+
+    moreBtn.onclick = function () {
+      if (moreInfo.style.display === "block") {
+        moreInfo.style.display = "none";
+        moreBtn.textContent = "waapas dekhna hai?";
+      } else {
+        moreInfo.style.display = "block";
+        moreBtn.textContent = "Itna hi hai :(";
+      }
+    };
+  </script>
+</body>
+</html>
